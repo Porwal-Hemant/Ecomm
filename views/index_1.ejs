@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="56afea50b83164e3e272d4ebeccd94fb.png" class="logo" alt="Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index_1.ejs">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="new_login.html">Login/Sign-up</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="hero">
+        <!-- Hero section content goes here -->
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="OIP (2).jpg" alt="">
+        </div>
+        <div class="fe-box">
+            <img src="OIP (3).jpg" alt="">
+        </div>
+        <div class="fe-box">
+            <img src="RecommendationEngine-1200x1200-1.png" alt="">
+        </div>      
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Recommended Items</h2>
+        <p>Some more recommended items according to your past search and order history</p>
+        <div class="pro-container">
+            <% products.forEach(product => { %>
+                <div class="pro">
+                    <img src="<%= product['Product URL'] %>" alt="<%= product.Title %>">
+                    <div class="des">
+                        <span><%= product.Title %></span>
+                        <h5><%= product.Category %></h5>
+                        <h4>$<%= product.Price %></h4>
+                    </div>
+                    <a href="<%= product['Product URL'] %>">Shop Now</a>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+
+</body>
+</html>
+

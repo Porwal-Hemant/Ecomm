@@ -1,0 +1,476 @@
+Reset body margin */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* padding and border are included in the width and height calculations */
+
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: black;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: black;
+}
+
+h4 {
+  font-size: 20px;
+  color: black;
+}
+
+body {
+  margin: 0;
+}
+
+/* Header styling */
+#header {
+  display: flex;
+  align-items: center; /* Align items at the start (top) */
+  justify-content: space-between;
+  padding: 20px 80px; /* Add some padding if needed */
+  background-color: antiquewhite;
+  box-shadow: 0 5px 15px rgba(0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+/* Logo styling */
+.logo {
+  width: 100px;
+  height: 40px;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+/*  In order to align all items of navigation bar in a single line  */
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  In order to remove bullet points of the list  */
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* In order to remove underline from the links  */
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s ease;
+  /* Last line in order to have changes smoothly  */
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: red;
+  /* .active is the class name  */
+}
+
+/* we have to use pseudo classes before and after  */
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  /*  content will be empty  */
+  width: 30%;
+  height: 2px;
+  background: red;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#hero {
+  background-image: url("ecom.jpg");
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  /* Now i want i text to align in the middle from left or right  */
+
+  padding: 0 80px;
+
+  /* Now i want it to align in the middle  */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* #feature.fe-box
+{
+    width : 50px ; 
+    text-align: center ;
+    padding : 25px 15px ; 
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border: 1px solid black ; 
+}
+ */
+
+#feature {
+  padding: 40px 80px;
+  /* Now i want to align items in a single row  */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.fe-box {
+  width: 250px;
+  text-align: center;
+  padding: 20px; /* Adjust padding for better spacing */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for card effect */
+  border-radius: 12px; /* Rounded corners */
+  margin: 15px 0;
+  background-color: #ffffff; /* White background for the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.fe-box img {
+  width: 100%;
+  border-radius: 8px; /* Rounded corners for images */
+  margin-bottom: 10px;
+}
+
+.fe-box h4 {
+  display: inline-block;
+  padding: 10px 15px; /* Adjust padding for better spacing */
+  line-height: 1.4;
+  border-radius: 6px; /* Rounded corners for the heading background */
+  color: #333; /* Darker text color for better readability */
+  background-color: #f9f9f9; /* Subtle background color */
+  border: 1px solid #ddd; /* Light border color */
+}
+
+/* Add hover effect to enhance interactivity */
+.fe-box:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.fe-box {
+  width: 250px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 50px; /* Round the corners */
+  margin: 15px;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fe-box img {
+  width: 100%;
+  border-radius: 50px; /* Round the corners of the image */
+  margin-bottom: 10px;
+}
+
+.fe-box h4 {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 30px; /* Round the corners of the heading background */
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+.fe-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.fe-box {
+  width: 250px;
+  height: 250px; /* Equal width and height for circles */
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 50%; /* Fully round shape */
+  margin: 15px;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fe-box img {
+  width: 80%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.fe-box h4 {
+  padding: 10px 15px;
+  border-radius: 20px; /* Rounded corners for text */
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+.fe-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+
+#product1 {
+  text-align: center;
+}
+
+#product1 .pro {
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid black;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  background-color: #ffe6cc; /* Light red color */
+}
+
+#product1 .pro-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+#product1 .pro:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+/*  Image is not coming under the box  */
+
+#product1 .pro img {
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid #ffcdd2; /* Light red border */
+  background-color: red; /* Set the background color to red */
+}
+
+/* #product1 .pro .des
+{
+    text-align: start  ; 
+    padding : 10px 0; 
+
+} */
+
+/*  Here button css code will going to be written here */
+/* #hero button 
+{
+     background-image:url("") ;    // add suitable button to the website
+
+}
+
+
+/* Reset body margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* padding and border are included in the width and height calculations */
+    font-family: sans-serif;
+  }
+  
+  h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: black;
+  }
+  
+  h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: black;
+  }
+  
+  h4 {
+    font-size: 20px;
+    color: black;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #f5dffd; /* Update background color to the desired shade */
+    font-family: sans-serif;
+  }
+  
+  
+  /* Header styling */
+  #header {
+    display: flex;
+    align-items: center; /* Align items at the start (top) */
+    justify-content: space-between;
+    padding: 20px 80px; /* Add some padding if needed */
+    background-color: antiquewhite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Logo styling */
+  .logo {
+    width: 100px;
+    height: 40px;
+  }
+  
+  .section-p1 {
+    padding: 40px 80px;
+  }
+  
+  /* In order to align all items of navigation bar in a single line */
+  #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* In order to remove bullet points of the list */
+  #navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  /* In order to remove underline from the links */
+  #navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    transition: 0.3s ease;
+    /* Last line in order to have changes smoothly */
+  }
+  
+  #navbar li a:hover,
+  #navbar li a.active {
+    color: red;
+    /* .active is the class name */
+  }
+  
+  /* we have to use pseudo classes before and after */
+  #navbar li a.active::after,
+  #navbar li a:hover::after {
+    content: "";
+    /* content will be empty */
+    width: 30%;
+    height: 2px;
+    background: red;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+  }
+  
+  #hero {
+    background-image: url("ecom.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    /* Now i want i text to align in the middle from left or right */
+    padding: 0 80px;
+    /* Now i want it to align in the middle */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  #feature {
+    padding: 40px 80px;
+    /* Now i want to align items in a single row */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .fe-box {
+    width: 250px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 15px 0;
+  }
+  
+  .fe-box img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .fe-box h4 {
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: black;
+    background-color: #fddde4;
+    border: 1px solid black;
+  }
+  
+  #product1 {
+    text-align: center;
+  }
+  
+  #product1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid black;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    background-color: #ffe6cc; /* Light red color */
+  }
+  
+  #product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  #product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  }
+  
+  #product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid #ffcdd2; /* Light red border */
+    background-color: red; /* Set the background color to red */
+  }
